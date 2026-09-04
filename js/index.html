@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Directory</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container"></div>
-    <script src="script.js"></script>
+
+  <main class="container">
+    <h1>Add Person</h1>
+    <p>Click a button below to manage the directory.</p>
+
+    <!-- Control Buttons -->
+    <div class="button-group">
+      <button type="button" id="btnShowForm">Add Person</button>
+      <button type="button" id="btnViewList">View Person List</button>
+    </div>
+
+    <!-- Dynamic Injection Target -->
+    <div id="contentArea"></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
