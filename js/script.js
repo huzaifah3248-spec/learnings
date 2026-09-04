@@ -16,9 +16,8 @@ const btnShowForm = document.getElementById("btnShowForm");
 const btnViewList = document.getElementById("btnViewList");
 const contentArea = document.getElementById("contentArea");
 
-// 1. View Person List Handler
 btnViewList.addEventListener("click", function () {
-  contentArea.innerHTML = ""; // Clear active form/list
+  contentArea.innerHTML = "";
 
   const listHeading = document.createElement("h2");
   listHeading.textContent = "Person List";
@@ -48,7 +47,7 @@ btnViewList.addEventListener("click", function () {
 
 // 2. Add Person Form Handler
 btnShowForm.addEventListener("click", function () {
-  contentArea.innerHTML = ""; // Clear active table
+  contentArea.innerHTML = ""; 
 
   if (person.length >= 4) {
     alert("Maximum number of persons added.");
@@ -85,7 +84,7 @@ btnShowForm.addEventListener("click", function () {
     `;
 
     document.getElementById("addAnother").addEventListener("click", function () {
-      btnShowForm.click(); // Re-triggers form display cleanly
+      btnShowForm.click(); 
     });
   });
 });
