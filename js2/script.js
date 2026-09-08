@@ -83,11 +83,23 @@ class Truck extends Car {
   }
 }
 
-const myTruck = new Truck("Titan", "Volvo", "FH16", 2022, 2, 25);
-myTruck.display();
-
-const myCar = new Car(prompt("Enter car name:"), prompt("Enter car brand:"), 
+let a ;
+a = parseInt(prompt("Enter your selection (0 for car, 1 for truck):"));
+switch(a) {
+  case 0:
+    const myCar = new Car(prompt("Enter car name:"), prompt("Enter car brand:"), 
 prompt("Enter car model:"), parseInt(prompt("Enter car year:")),
  parseInt(prompt("Enter number of doors:")));
+    myCar.display();
+    break;
 
-myCar.display();
+  case 1:
+    const myTruck = new Truck(prompt("Enter truck name:"), prompt("Enter truck brand:"), 
+prompt("Enter truck model:"), parseInt(prompt("Enter truck year:")),
+ parseInt(prompt("Enter number of doors:")), parseFloat(prompt("Enter truck capacity in tons:")));
+    myTruck.display();
+    break;
+  default:
+    console.log("Invalid selection. Please select 0 for car or 1 for truck.");
+}
+
