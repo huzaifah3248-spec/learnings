@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Details</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Registry System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Vehicle Details</h1>
-  <script src="script.js"></script>
+  <main class="container">
+    <header class="app-header">
+      <h1>Vehicle Registry</h1>
+      <p>OOP Inheritance &amp; Encapsulation Demo</p>
+    </header>
+
+    <form id="vehicleForm" class="vehicle-form" novalidate>
+      <div class="form-group">
+        <label for="vehicleType">Vehicle Type</label>
+        <select id="vehicleType" name="vehicleType" required>
+          <option value="0">Car</option>
+          <option value="1">Truck</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Vehicle Name</label>
+          <input type="text" id="name" placeholder="e.g., Civic or IronHide" required>
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input type="text" id="brand" placeholder="e.g., Honda, Volvo" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="model">Model</label>
+          <input type="text" id="model" placeholder="e.g., EX-L or FH16" required>
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="number" id="year" placeholder="e.g., 2022" min="1900" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="doors">Doors</label>
+          <input type="number" id="doors" value="4" min="1" required>
+        </div>
+        <div class="form-group" id="capacityContainer" style="display: none;">
+          <label for="capacity">Capacity (tons)</label>
+          <input type="number" id="capacity" placeholder="e.g., 18.5" min="0.1" step="0.1">
+        </div>
+      </div>
+
+      <button type="submit" id="btnSubmit" class="btn-primary">Register Vehicle</button>
+    </form>
+
+    <section class="output-panel">
+      <h2>Registered Vehicle Details</h2>
+      <div id="outputDisplay" class="output-card placeholder-text">
+        No vehicle registered yet. Complete the form above.
+      </div>
+    </section>
+  </main>
 </body>
 </html>

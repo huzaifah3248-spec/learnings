@@ -12,8 +12,8 @@ class Vehicle {
   }
   set year(val) {
     const currentYear = new Date().getFullYear();
-    if (typeof val !== "number" || val < 1886 || val > currentYear + 1) {
-      throw new RangeError(`Year must be between 1886 and ${currentYear + 1}.`);
+    if (typeof val !== "number" || val < 1900 || val > currentYear + 1) {
+      throw new RangeError(`Year must be between 19008 and ${currentYear + 1}.`);
     }
     this.#year = val; }
 
